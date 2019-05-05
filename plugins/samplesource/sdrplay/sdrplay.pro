@@ -17,6 +17,7 @@ INCLUDEPATH += ../../../sdrbase
 INCLUDEPATH += ../../../sdrgui
 INCLUDEPATH += ../../../swagger/sdrangel/code/qt5/client
 macx:INCLUDEPATH += /usr/local/include
+macx:INCLUDEPATH += ../../../../deps/libmirisdr-4/include
 
 DEFINES += USE_SSE2=1
 QMAKE_CXXFLAGS += -msse2
@@ -45,7 +46,7 @@ LIBS += -L../../../sdrgui/$${build_subdir} -lsdrgui
 LIBS += -L../../../swagger/$${build_subdir} -lswagger
 
 macx {
-    LIBS += -L/usr/local/lib -lmirisdr
+    LIBS += -L../../../../deps/libmirisdr-4/build/src -lmirisdr
     QMAKE_LFLAGS_SONAME = -Wl,-install_name,@rpath/
 }
 

@@ -17,7 +17,7 @@ DEFINES += USE_SSE4_1=1
 QMAKE_CXXFLAGS += -msse4.1
 QMAKE_CXXFLAGS += -std=c++11
 
-CONFIG(macx):LIBPERSEUSSRC = "../../../../../libperseus-sdr"
+CONFIG(macx):LIBPERSEUSSRC = "../../../../deps/libperseus-sdr"
 
 INCLUDEPATH += $$PWD
 INCLUDEPATH += ../../../exports
@@ -26,6 +26,7 @@ INCLUDEPATH += ../../../sdrgui
 INCLUDEPATH += ../../../swagger/sdrangel/code/qt5/client
 INCLUDEPATH += ../../../devices
 INCLUDEPATH += $$LIBPERSEUSSRC
+
 macx {
     INCLUDEPATH += /opt/local/include
     INCLUDEPATH += /usr/local/include

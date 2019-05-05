@@ -12,7 +12,7 @@ QT += core gui multimedia opengl
 TARGET = outputsoapysdr
 
 CONFIG(MSVC):LIBSOAPYSDRSRC = "C:\Program Files\PothosSDR"
-CONFIG(macx):LIBSOAPYSDRSRC = "../../../../../SoapySDR"
+CONFIG(macx):LIBSOAPYSDRSRC = "../../../../deps/SoapySDR"
 
 INCLUDEPATH += $$PWD
 INCLUDEPATH += ../../../exports

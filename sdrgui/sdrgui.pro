@@ -38,7 +38,7 @@ CONFIG(MINGW32):INCLUDEPATH += "C:\softs\boost_1_66_0"
 CONFIG(MINGW64):INCLUDEPATH += "C:\softs\boost_1_66_0"
 CONFIG(MSVC):INCLUDEPATH += "C:\softs\boost_1_66_0"
 
-CONFIG(macx):INCLUDEPATH += "../../../boost_1_69_0"
+CONFIG(macx):INCLUDEPATH += ../../deps/boost_1_69_0
 
 SOURCES += mainwindow.cpp\
         device/deviceuiset.cpp\

@@ -14,6 +14,8 @@ INCLUDEPATH += ../exports
 INCLUDEPATH += ../httpserver
 INCLUDEPATH += ../qrtplib
 INCLUDEPATH += ../swagger/sdrangel/code/qt5/client
+CONFIG(macx):INCLUDEPATH += /usr/local/include
+CONFIG(macx):LIBS += -L/usr/local/lib -lopus
 
 DEFINES += USE_KISSFFT=1
 win32 {
@@ -43,7 +45,7 @@ CONFIG(MINGW32):INCLUDEPATH += "C:\softs\serialDV"
 CONFIG(MINGW64):INCLUDEPATH += "C:\softs\serialDV"
 CONFIG(MSVC):INCLUDEPATH += "C:\softs\serialDV"
 
-CONFIG(macx):INCLUDEPATH += "../../../boost_1_69_0"
+CONFIG(macx):INCLUDEPATH += "../../deps/boost_1_69_0"
 
 MINGW32 || MINGW64 || MSVC {
     HEADERS += \
@@ -234,7 +236,7 @@ HEADERS  += audio/audiodevicemanager.h\
         webapi/webapiadapterinterface.h\
         webapi/webapirequestmapper.h\
         webapi/webapiserver.h\
-        mainparser.h
+        mainparser.h\
 
 MSVC {
     LIBS += -LC:\softs\libopus_v1.3_msvc15\bin\x64 -LC:\softs\libopus_v1.3_msvc15\lib\x64 -lopus

@@ -29,10 +29,10 @@ CONFIG(MSVC):LIBHACKRFSRC = "C:\softs\hackrf\host"
 
 CONFIG(MINGW32):LIBLIMESUITESRC = "C:\softs\LimeSuite"
 CONFIG(MINGW64):LIBLIMESUITESRC = "C:\softs\LimeSuite"
-CONFIG(macx):LIBLIMESUITESRC = "../../../LimeSuite-17.12.0"
+CONFIG(macx):LIBLIMESUITESRC = "../../deps/LimeSuite"
 
 CONFIG(MINGW32):LIBPERSEUSSRC = "C:\softs\libperseus-sdr"
-CONFIG(macx):LIBPERSEUSSRC = "../../../libperseus-sdr"
+CONFIG(macx):LIBPERSEUSSRC = "../../deps/libperseus-sdr"
 
 CONFIG(MINGW32):LIBIIOSRC = "C:\softs\libiio"
 CONFIG(MINGW64):LIBIIOSRC = "C:\softs\libiio"
@@ -46,7 +46,7 @@ INCLUDEPATH += "C:\softs\libusb-1.0.21\include"
 INCLUDEPATH += $$LIBBLADERF/include
 INCLUDEPATH += $$LIBHACKRFSRC
 macx {
-    INCLUDEPATH += "../../../boost_1_69_0"
+    INCLUDEPATH += "../../deps/boost_1_69_0"
     INCLUDEPATH += "/Library/Frameworks/iio.framework/Headers/"
     INCLUDEPATH += "/usr/local/include"
     INCLUDEPATH += "/opt/local/include"

@@ -18,7 +18,7 @@ QMAKE_CXXFLAGS += -msse4.1
 QMAKE_CXXFLAGS += -std=c++11
 
 CONFIG(MINGW32):LIBLIMESUITESRC = "C:\softs\LimeSuite"
-CONFIG(macx):LIBLIMESUITESRC = "../../../../../LimeSuite-18.10.0"
+CONFIG(macx):LIBLIMESUITESRC = "../../../../deps/LimeSuite"
 
 INCLUDEPATH += $$PWD
 INCLUDEPATH += ../../../exports
@@ -74,7 +74,7 @@ MSVC {
     LIBS += -L"C:\Program Files\PothosSDR\bin" -L"C:\Program Files\PothosSDR\lib" -lLimeSuite
 }
 macx {
-    LIBS += -L/opt/install/LimeSuite/lib/ -lLimeSuite
+    LIBS += -L/usr/local/Cellar/limesuite/19.01.0/lib/ -lLimeSuite
     QMAKE_LFLAGS_SONAME = -Wl,-install_name,@rpath/
 }
 

@@ -13,7 +13,7 @@ DEFINES += HAVE_CONFIG_H=1
 
 CONFIG(MINGW32):LIBPERSEUSSRC = "C:\softs\libperseus-sdr"
 CONFIG(MINGW64):LIBPERSEUSSRC = "C:\softs\libperseus-sdr"
-CONFIG(macx):LIBPERSEUSSRC = "../../../libperseus-sdr"
+CONFIG(macx):LIBPERSEUSSRC = "../../deps/libperseus-sdr"
 INCLUDEPATH += $$LIBPERSEUSSRC/src
 
 CONFIG(MINGW32):INCLUDEPATH += "C:\softs\libusb-1.0.21\include"
@@ -44,6 +44,7 @@ macx {
     QMAKE_LFLAGS_SONAME = -Wl,-install_name,@rpath/
     LIBS += -L/opt/local/lib -lusb-1.0
 }
+LIBS += -L/usr/local/Cellar/libusb/1.0.22/lib -lusb-1.0
 
 CONFIG(ANDROID):CONFIG += mobility
 CONFIG(ANDROID):MOBILITY =

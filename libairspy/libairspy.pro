@@ -42,6 +42,6 @@ macx {
     HEADERS =
     LIBS += -L/opt/local/lib -lairspy
 }
-
+LIBS += -L/usr/local/Cellar/airspy/1.0.9/lib -lairspy
 CONFIG(ANDROID):CONFIG += mobility
 CONFIG(ANDROID):MOBILITY =

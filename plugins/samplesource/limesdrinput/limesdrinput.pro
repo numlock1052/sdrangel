@@ -20,7 +20,7 @@ QMAKE_CXXFLAGS += -std=c++11
 CONFIG(MINGW32):QMAKE_CXXFLAGS += -std=c++11
 
 CONFIG(MINGW32):LIBLIMESUITESRC = "C:\softs\LimeSuite"
-CONFIG(macx):LIBLIMESUITESRC = "../../../../../LimeSuite-18.10.0"
+CONFIG(macx):LIBLIMESUITESRC = "../../../../deps/LimeSuite"
 
 INCLUDEPATH += $$PWD
 INCLUDEPATH += ../../../exports
@@ -78,5 +78,6 @@ macx {
     LIBS += -L/opt/install/LimeSuite/lib/ -lLimeSuite
     QMAKE_LFLAGS_SONAME = -Wl,-install_name,@rpath/
 }
+CONFIG(macx):LIBS += -L/usr/local/Cellar/limesuite/19.01.0/lib -lLimeSuite
 
 RESOURCES = ../../../sdrgui/resources/res.qrc

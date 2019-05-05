@@ -13,7 +13,7 @@ TARGET = inputairspy
 
 CONFIG(MINGW32):LIBAIRSPYSRC = "C:\softs\libairspy"
 CONFIG(MSVC):LIBAIRSPYSRC = "C:\softs\libairspy"
-CONFIG(macx):INCLUDEPATH += /opt/local/include
+CONFIG(macx):INCLUDEPATH += /usr/local/Cellar/airspy/1.0.9/include
 
 INCLUDEPATH += $$PWD
 INCLUDEPATH += ../../../exports
@@ -55,5 +55,6 @@ macx {
     LIBS += -L/opt/local/lib -lairspy
     QMAKE_LFLAGS_SONAME = -Wl,-install_name,@rpath/
 }
+LIBS += -L/usr/local/Cellar/airspy/1.0.9/lib -lairspy
 
 RESOURCES = ../../../sdrgui/resources/res.qrc

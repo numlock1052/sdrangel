@@ -17,7 +17,7 @@ QMAKE_CXXFLAGS += -std=c++11
 
 CONFIG(MINGW32):LIBLIMESUITESRC = "C:\softs\LimeSuite"
 CONFIG(MINGW64):LIBLIMESUITESRC = "C:\softs\LimeSuite"
-CONFIG(macx):LIBLIMESUITESRC = "../../../LimeSuite-18.10.0"
+CONFIG(macx):LIBLIMESUITESRC = "../../deps/LimeSuite"
 
 CONFIG(MINGW32):INCLUDEPATH += "C:\softs\libusb-1.0.21\include\libusb-1.0"
 CONFIG(MINGW64):INCLUDEPATH += "C:\softs\libusb-1.0.21\include"
@@ -100,7 +100,7 @@ CONFIG(MINGW64):LIBS += -LC:\softs\libusb-1.0.21\MinGW64\dll -llibusb-1.0
 macx {
     SOURCES =
     HEADERS =
-    LIBS += -L/opt/install/LimeSuite/lib/ -lLimeSuite
+    LIBS += -L/usr/local/Cellar/limesuite/19.01.0/lib -lLimeSuite
     LIBS += -L/opt/local/lib -lusb-1.0
 }
 #CONFIG(MINGW32):LIBS += -L../libsqlite3/release -llibsqlite3
